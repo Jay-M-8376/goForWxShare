@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf8">
+        <title>nothing</title>
+        <style>
+            input{
+                width:30vw;
+                height:40px;
+                font-size:34px;
+                line-height: 40px;
+            }
+
+            body{
+                font-size:34px;
+                line-height: 40px;
+            }
+            label{
+                display: block;
+            }
+            button{
+                width:300px;
+                height:60px;
+                font-size:40px;
+                line-height: 50px;
+                background:gray;
+
+            }
+        </style>
+    </head>
+    <body>
+        <label for="title"><input type="text" id="title" value="title">标题</label>
+        <label for="desc"><input type="text" id="desc" value="desc">内容</label>
+        <button onclick="share()">setShare</button>
+        <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+        <script src="http://project.mlord.cn/apis/share.js"></script>
+        <script>
+            /*setTimeout(function(){
+                //setShare("testShare","shareDesc","http://project.mlord.cn/america/images/share.png","http://project.mlord.cn/america")
+            },100)*/
+
+            function share(){
+                var title = document.getElementById('title').value;
+                var desc = document.getElementById('desc').value;
+                setShare(title,desc,"http://project.mlord.cn/baobo/images/share.jpg","http://project.mlord.cn/apis")
+            }
+        </script>
+    </body>
+</html>
